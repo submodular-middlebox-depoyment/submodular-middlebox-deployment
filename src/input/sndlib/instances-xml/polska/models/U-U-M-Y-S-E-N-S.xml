@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<model xmlns="http://sndlib.zib.de/model" version="1.0">
+ <nodeModel>NO_NODE_HARDWARE</nodeModel>
+ <linkModel>UNDIRECTED</linkModel>
+ <linkCapacityModel>MODULAR_LINK_CAPACITIES</linkCapacityModel>
+ <fixedChargeModel>YES</fixedChargeModel>
+ <demandModel>UNDIRECTED</demandModel>
+ <routingModel>SINGLE_PATH</routingModel>
+ <admissiblePathModel>EXPLICIT_LIST</admissiblePathModel>
+ <hopLimitModel>IGNORE_HOP_LIMITS</hopLimitModel>
+ <objectiveModel>MINIMIZE_TOTAL_COST</objectiveModel>
+ <survivabilityModel>SHARED_PATH_PROTECTION</survivabilityModel>
+</model>

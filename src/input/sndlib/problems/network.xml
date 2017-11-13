@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<network xmlns="http://sndlib.zib.de/network" version="1.0">
+ <networkStructure>
+  <nodes coordinatesType="geographical">
+   <node id="A">
+    <coordinates>
+     <x>11.49</x>
+     <y>49.26</y>
+    </coordinates>
+   </node>
+   <node id="B">
+    <coordinates>
+     <x>11.8</x>
+     <y>48.65</y>
+    </coordinates>
+   </node>
+   <node id="C">
+    <coordinates>
+     <x>12.25</x>
+     <y>49.1</y>
+    </coordinates>
+   </node>
+   <node id="D">
+    <coordinates>
+     <x>12.4</x>
+     <y>49.9</y>
+    </coordinates>
+   </node>
+   <node id="E">
+    <coordinates>
+     <x>11.43</x>
+     <y>49.9</y>
+    </coordinates>
+   </node>
+  </nodes>
+  <links>
+   <link id="L_AB">
+    <source>A</source>
+    <target>B</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <preInstalledModule>
+     <capacity>63.0</capacity>
+     <cost>100.0</cost>
+    </preInstalledModule>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>1000.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>1200.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+   <link id="L_AC">
+    <source>A</source>
+    <target>C</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>1300.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>1800.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+   <link id="L_BC">
+    <source>B</source>
+    <target>C</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>1200.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>1900.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+   <link id="L_AD">
+    <source>A</source>
+    <target>D</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>2000.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>3000.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+   <link id="L_DE">
+    <source>D</source>
+    <target>E</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>1000.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>2000.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+   <link id="L_EC">
+    <source>E</source>
+    <target>C</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>1000.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>2000.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+   <link id="L_BD">
+    <source>B</source>
+    <target>D</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>1000.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>2000.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+   <link id="L_DC">
+    <source>D</source>
+    <target>C</target>
+    <routingCost>10.0</routingCost>
+    <setupCost>1000.0</setupCost>
+    <additionalModules>
+     <addModule>
+      <capacity>63.0</capacity>
+      <cost>1000.0</cost>
+     </addModule>
+     <addModule>
+      <capacity>252.0</capacity>
+      <cost>2000.0</cost>
+     </addModule>
+    </additionalModules>
+   </link>
+  </links>
+ </networkStructure>
+ <demands>
+  <demand id="D_AC">
+   <source>A</source>
+   <target>C</target>
+   <demandValue>50.0</demandValue>
+   <admissiblePaths>
+    <admissiblePath id="P1">
+     <linkId>L_AB</linkId>
+     <linkId>L_BC</linkId>
+    </admissiblePath>
+    <admissiblePath id="P2">
+     <linkId>L_AC</linkId>
+    </admissiblePath>
+    <admissiblePath id="P3">
+     <linkId>L_AB</linkId>
+     <linkId>L_BD</linkId>
+     <linkId>L_DC</linkId>
+    </admissiblePath>
+   </admissiblePaths>
+  </demand>
+  <demand id="D_EC">
+   <source>E</source>
+   <target>C</target>
+   <demandValue>27.0</demandValue>
+   <admissiblePaths>
+    <admissiblePath id="P1">
+     <linkId>L_EC</linkId>
+    </admissiblePath>
+    <admissiblePath id="P2">
+     <linkId>L_DE</linkId>
+     <linkId>L_DC</linkId>
+    </admissiblePath>
+    <admissiblePath id="P3">
+     <linkId>L_DE</linkId>
+     <linkId>L_BD</linkId>
+     <linkId>L_BC</linkId>
+    </admissiblePath>
+    <admissiblePath id="P4">
+     <linkId>L_DE</linkId>
+     <linkId>L_BD</linkId>
+     <linkId>L_AB</linkId>
+     <linkId>L_AC</linkId>
+    </admissiblePath>
+   </admissiblePaths>
+  </demand>
+  <demand id="D_AB">
+   <source>A</source>
+   <target>B</target>
+   <routingUnit>63</routingUnit>
+   <demandValue>2.0</demandValue>
+   <admissiblePaths>
+    <admissiblePath id="P1">
+     <linkId>L_AB</linkId>
+    </admissiblePath>
+    <admissiblePath id="P2">
+     <linkId>L_AC</linkId>
+     <linkId>L_BC</linkId>
+    </admissiblePath>
+   </admissiblePaths>
+   <maxPathLength>2</maxPathLength>
+  </demand>
+ </demands>
+</network>

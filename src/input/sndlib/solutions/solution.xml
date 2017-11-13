@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<solution xmlns="http://sndlib.zib.de/solution" version="1.0">
+ <linkConfigurations>
+  <linkConfiguration linkId="L_AB">
+   <installedModule>
+    <capacity>63.0</capacity>
+    <installCount>1.0</installCount>
+   </installedModule>
+   <installedModule>
+    <capacity>252.0</capacity>
+    <installCount>1.0</installCount>
+   </installedModule>
+  </linkConfiguration>
+  <linkConfiguration linkId="L_AC">
+   <installedModule>
+    <capacity>252.0</capacity>
+    <installCount>1.0</installCount>
+   </installedModule>
+  </linkConfiguration>
+  <linkConfiguration linkId="L_BC">
+   <installedModule>
+    <capacity>252.0</capacity>
+    <installCount>1.0</installCount>
+   </installedModule>
+  </linkConfiguration>
+  <linkConfiguration linkId="L_AD"/>
+  <linkConfiguration linkId="L_DE">
+   <installedModule>
+    <capacity>63.0</capacity>
+    <installCount>1.0</installCount>
+   </installedModule>
+  </linkConfiguration>
+  <linkConfiguration linkId="L_EC">
+   <installedModule>
+    <capacity>63.0</capacity>
+    <installCount>1.0</installCount>
+   </installedModule>
+  </linkConfiguration>
+  <linkConfiguration linkId="L_BD"/>
+  <linkConfiguration linkId="L_DC">
+   <installedModule>
+    <capacity>63.0</capacity>
+    <installCount>1.0</installCount>
+   </installedModule>
+  </linkConfiguration>
+ </linkConfigurations>
+ <demandRoutings state="NOS">
+  <demandRouting demandId="D_AC">
+   <flowPath>
+    <flowPathValue>50.0</flowPathValue>
+    <routingPath>
+     <linkId>L_AB</linkId>
+     <linkId>L_BC</linkId>
+    </routingPath>
+   </flowPath>
+  </demandRouting>
+  <demandRouting demandId="D_EC">
+   <flowPath>
+    <flowPathValue>27.0</flowPathValue>
+    <routingPath>
+     <linkId>L_EC</linkId>
+    </routingPath>
+   </flowPath>
+  </demandRouting>
+  <demandRouting demandId="D_AB">
+   <flowPath>
+    <flowPathValue>2.0</flowPathValue>
+    <routingPath>
+     <linkId>L_AB</linkId>
+    </routingPath>
+   </flowPath>
+  </demandRouting>
+ </demandRoutings>
+ <demandRoutings state="DEFAULT_BACKUP">
+  <demandRouting demandId="D_AC">
+   <flowPath>
+    <flowPathValue>50.0</flowPathValue>
+    <routingPath>
+     <linkId>L_AC</linkId>
+    </routingPath>
+   </flowPath>
+  </demandRouting>
+  <demandRouting demandId="D_EC">
+   <flowPath>
+    <flowPathValue>27.0</flowPathValue>
+    <routingPath>
+     <linkId>L_DE</linkId>
+     <linkId>L_DC</linkId>
+    </routingPath>
+   </flowPath>
+  </demandRouting>
+  <demandRouting demandId="D_AB">
+   <flowPath>
+    <flowPathValue>2.0</flowPathValue>
+    <routingPath>
+     <linkId>L_AC</linkId>
+     <linkId>L_BC</linkId>
+    </routingPath>
+   </flowPath>
+  </demandRouting>
+ </demandRoutings>
+</solution>
